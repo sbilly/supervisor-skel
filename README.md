@@ -27,6 +27,13 @@
 
 - misc/ubuntu-init/supervisor
  
+	如果是 pip 安装的 supervisord 需要：
+
+		ln -s /etc/supervisor/supervisord.conf /etc/supervisord.conf
+		ln -s /usr/local/bin/supervisord /usr/bin/supervisord
+		ln -s /usr/local/bin/supervisorctl /usr/bin/supervisorctl
+		mkdir -p /var/log/supervisor/
+
 	对应部署后的系统目录 /etc/init.d/supervisor
 
 	来自于 [https://github.com/Supervisor/initscripts/blob/master/ubuntu](https://github.com/Supervisor/initscripts/blob/master/ubuntu)
