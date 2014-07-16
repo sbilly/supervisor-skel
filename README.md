@@ -12,7 +12,7 @@
 	│          └─conf.d
 	├─doc
 	├─misc
-	│  └─ubuntu-init
+	│  └─supervisor-initscripts
 	└─src
 
 - conf/supervisor/default
@@ -25,7 +25,9 @@
 	
 	对应部署后的系统目录 /etc/supervisor 。`supervisor.conf` 可以在 `echo_supervisord_conf` 输出的基础上修改得到。
 
-- misc/ubuntu-init/supervisor
+- misc/supervisor-initscripts/ubuntu
+
+	以 submodule 的方式增加了 https://github.com/Supervisor/initscripts
  
 	如果是 pip 安装的 supervisord 需要：
 
@@ -34,6 +36,6 @@
 		ln -s /usr/local/bin/supervisorctl /usr/bin/supervisorctl
 		mkdir -p /var/log/supervisor/
 
-	对应部署后的系统目录 /etc/init.d/supervisor
+	部署中需要将对应的启动脚本部署到系统目录，例如：/etc/init.d/supervisor
 
 	来自于 [https://github.com/Supervisor/initscripts/blob/master/ubuntu](https://github.com/Supervisor/initscripts/blob/master/ubuntu)

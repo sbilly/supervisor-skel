@@ -1,0 +1,3 @@
+[submodule "misc/supervisor-initscripts"]
+	path = misc/supervisor-initscripts
+	url = https://github.com/Supervisor/initscripts.git
